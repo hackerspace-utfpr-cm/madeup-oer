@@ -1,0 +1,13 @@
+to piramide linhas
+  if linhas > 0
+    for colunas to linhas
+      moveto 3 * colunas, 0, 0
+    end
+    translate 1.5, 2, 0
+    piramide (linhas - 1)
+  end
+end
+piramide 4
+boxes
+
+

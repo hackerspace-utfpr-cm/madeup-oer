@@ -1,0 +1,19 @@
+yaw 90
+moveto 0, 0, 0
+for angle through 180
+  move 1
+  yaw 1
+end
+nsides = 100
+revolve 0, 1, 0, 360
+---------------------------
+.radius = 20
+for i to 360 by 20
+  moveto i, 70 * (sin i), 0
+end
+.radius = 10
+rotate 0, 0, 1, 45
+moveto -8, 10, -10
+moveto -8, -10, -10
+nsides = 50
+spheres

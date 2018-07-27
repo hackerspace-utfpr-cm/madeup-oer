@@ -1,0 +1,19 @@
+for angle through 180 by 10
+  polarto 10, angle
+end
+yaw 90
+move 20
+arco = extrude 0, 0, 1, 1
+
+moveto -2, 0, 2
+yaw -90
+move 6
+yaw 90
+move 4
+yaw 90
+move 6
+yaw 90
+move 4
+caixa = extrude 0, 0, -1, 3
+
+arco - caixa
