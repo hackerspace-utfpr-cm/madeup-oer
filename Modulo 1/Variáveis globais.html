@@ -1,0 +1,68 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE = edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <title> Variáveis globais</title>
+        <link href="http://www.twodee.org/blog/wp-content/themes/midlife/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
+        <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
+        <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
+    </head>
+    <body>
+        <div id="whole">
+            <h1>Variáveis globais</h1>
+            <h3>
+                <p>Além das váriaveis criadas pelo programador, existem também as váriaveis padrões do Madeup. São elas: <b>.radius</b>, <b>.innerRadius</b>, <b>.rgb</b>,<b> nsides</b>,<b> pi</b> e <b>e</b>. Podemos alterar o valor dessas váriaveis, funcionando da mesma forma que váriaveis criadas pelo programador.</p>
+                <p>Esssas váriaveis, influenciam nas instruções de solidificação, que são instruções para solidificar nosso caminho.</p>
+                <p>Quando deixamos o caminho ao movimentar com a seta, esse caminho é nada mais que uma linha como base para solidificarmos. Caso não solidificarmos nosso caminho, não teremos um objeto. As instruções de solidificação mais comuns são: dowel, revolve, extrude e tube. As váriaveis padrões do Madeup, influenciam diretamente nessas funções. Discorrendo um pouco sobre as váriaveis padrões:</p>
+                <ul>
+                    <li><b>nsides</b>:essa é a váriavel que vai definir quantos lados terão nossas solidificações feitas pelo dowel. O padrão inicial dessa váriavel é 4, logo, se não alterarmos o valor dela e usarmos a instrução dowel para solidificar, ele irá solidifacar um obejto com 4 lados.</li>
+                    <li><b>.radius</b>: essa é a váriavel que define o raio da solidificação feita pelo dowel e tube. O padrão inicial dela é 1, ou seja, se não alterarmos o valor dessa váriavel, as solidificações feitas pelo dowel terá um raio de 1. Uma observação feita foi que: caso utilizemos a instrução “.radius = 4”, teoricamente o raio da solidificação deveria ser 4, não é o que se obeserva na prática, que tem o raio de 0.5 a mais do que você colocou para a variável, no caso supracitado, o raio da solidificação será 4.5.</li>
+                    <li><b>.innerRadius</b>: essa váriável é utilizada para a instrução tube, ela irá determinar a o raio interno gerado por essa solidificação.</li>
+                    <li><b>.rbg</b>: essa é a váriavel que modificará a cor da solidificação. Essa váriavel é meramente questões estéticas, já que no momento da impressão, a cor do seu filamento que irá definir a cor do objeto.</li>
+                    <li><b>pi</b>: a váriavel pi é a constante matemática pi (3,14159...)</li>
+                    <li><b>e</b>: essa váriavel é a constante matemática de Euller (2,718281...)</li>
+                </ul>
+            </h3>
+            <div id="mup_blocks">
+                <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
+                  <textarea name="src">-- instruções auxilio de a solidificação--
+.radius = 2
+moveto 0,0,0
+move 2.5
+dowel
+moveto 5,1.25,-1.25
+pitch -90
+move 2.5
+tube
+.innerRadius = 1.5
+.rgb = {255,255,255}
+moveto 0, 5, -1.25
+move 2.5
+tube
+moveto 5, 5, -1.25
+move 2.5
+nsides = 50
+tube</textarea>
+                  <input type="submit">
+                </form>
+                <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>
+                <script>
+                  var mupDiv = jQuery('#mup_blocks');
+                  mupDiv.closest('pre').replaceWith(mupDiv);
+                  document.getElementById('mup_form_blocks').submit();
+                </script>
+            </div>
+            <h3>
+                <p>Nota-se que essas váriaveis são fundamentais para nosso objeto, já que influencia diretamente nas nossas instruções de solidificação.</p>
+            </h3>
+        </div>
+        <!-- /whole -->
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE = edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <title> Introdução e movimentação</title>
+        <link href="http://www.twodee.org/blog/wp-content/themes/midlife/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
+        <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
+        <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
+    </head>
+    <body>
+        <div id="whole">
+            <h1>Introdução e instruções de movimento</h1>
+            <h3>
+                <p>O Madeup é uma linguagem de programação para fazer modelos em 3D. Esses modelos são utilizados para imprimirmos objetos com a impressora 3D.</p>
+                <p>No ambiente de desenvolvimento do Madeup, o programador é colocado num plano 3D onde podemos mover uma seta em linha reta para qualquer direção.</p>
+                <p>Por onde essa seta andar, ela deixará um caminho que servirá como base do nosso objeto. Para nos auxiliar nesse movimento da setas, temos várias instruções. Dentre elas, as mais usadas, com as respectivas tradução entre parênteses, são:</p>
+                <ul>
+                    <li><b>move(mover) X</b>: a instrução move a seta X unidades para a direção em que a seta aponta. <b>Exemplo</b>: move 10, a instrução irá mover 10 unidades em linha reta para onde a seta estará apontando.</li>
+                    <li><b>moveto(mover para) X, Y, Z</b>: essa instrução move a seta para a posição X ,Y, Z do plano, deixando o caminho por onde ela fizer o percurso. <b>Exemplo</b>: moveto 0,0,0, essa instrução irá mover a seta para a origem do plano.</li>
+                </ul>
+                    <p>As instruções supracitadas são as que movem a nossa seta pelo plano. Agora para direcionar para onde essa seta irá apontar e consequentemente para onde irá se mover, temos outras instruções para nos auxiliar. Uma delas é a yaw:</p>
+                <ul>
+
+                    <li><b>yaw(desviar) X</b>: rotaciona a seta em X graus para a direita. A seta, inicialmente estará apontando para o norte do plano. <b>Exemplo</b>: yaw 90, a instrução irá rotacionar a seta em 90 graus.</li>
+                </ul>
+            </h3>
+            <div id="mup_blocks">
+                <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
+                  <textarea name="src">-- instruções auxilio da movimentação--
+moveto 0 ,0 ,0   -- move a seta para o centro do plano -- 
+move 5           -- move a seta 5 unidades para a nova direção da seta --
+yaw 90           -- gira a seta 90 graus para a direita --
+move 3           -- move a seta 3 unidades para a nova direção --
+dowel</textarea>
+                  <input type="submit">
+                </form>
+                <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>
+                <script>
+                  var mupDiv = jQuery('#mup_blocks');
+                  mupDiv.closest('pre').replaceWith(mupDiv);
+                  document.getElementById('mup_form_blocks').submit();
+                </script>
+            </div>
+        </div>
+        <!-- /whole -->
+    </body>
+</html>
