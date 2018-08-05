@@ -15,7 +15,7 @@
         <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
     </head>
     <body>
-        <div id="whole">
+        <div>
             <h1>Introdução e instruções de movimento</h1>
             <h3>
                 <p>O Madeup é uma linguagem de programação para fazer modelos em 3D. Esses modelos são utilizados para imprimirmos objetos com a impressora 3D.</p>
@@ -23,25 +23,37 @@
                 <p>Por onde essa seta andar, ela deixará um caminho que servirá como base do nosso objeto. Para nos auxiliar nesse movimento da setas, temos várias instruções. Dentre elas, as mais usadas, com as respectivas tradução entre parênteses, são:</p>
                 <ul>
                     <li><b>move(mover) X</b>: a instrução move a seta X unidades para a direção em que a seta aponta. <b>Exemplo</b>: move 10, a instrução irá mover 10 unidades em linha reta para onde a seta estará apontando.</li>
-                    <li><b>moveto(mover para) X, Y, Z</b>: essa instrução move a seta para a posição X ,Y, Z do plano, deixando o caminho por onde ela fizer o percurso. <b>Exemplo</b>: moveto 0,0,0, essa instrução irá mover a seta para a origem do plano.</li>
-                </ul>
-                    <p>As instruções supracitadas são as que movem a nossa seta pelo plano. Agora para direcionar para onde essa seta irá apontar e consequentemente para onde irá se mover, temos outras instruções para nos auxiliar. Uma delas é a yaw:</p>
-                <ul>
 
-                    <li><b>yaw(desviar) X</b>: rotaciona a seta em X graus para a direita. A seta, inicialmente estará apontando para o norte do plano. <b>Exemplo</b>: yaw 90, a instrução irá rotacionar a seta em 90 graus.</li>
+                    <li><b>moveto(mover para) X, Y, Z</b>: essa instrução move a seta para a posição X ,Y, Z do plano, deixando o caminho por onde ela fizer o percurso. <b>Exemplo</b>: moveto 0,0,0, essa instrução irá mover a seta para a origem do plano.</li>
+
+                    <li><b>translate(transladar) X, Y, Z</b>: essa instrução move o centro do plano cartesiano para a posição X ,Y, Z do plano. <b>Exemplo</b>: translate 1,1,1, essa instrução irá mover o centro do plano cartesiano em 1 unidade em relação aos eixos X, Y e Z.</li>
+                </ul>
+                    <p>As instruções supracitadas são as que movem a nossa seta pelo plano. Agora para direcionar para onde essa seta irá apontar e consequentemente para onde irá se mover, temos outras instruções para nos auxiliar, como:</p>
+                <ul>
+                    <li><b>pitch(levantar) X</b>: rotaciona a seta em X graus em torno do eixo X relativo a seta. A seta, inicialmente estará apontando para o norte do plano. <b>Exemplo</b>: pitch 90, a instrução irá rotacionar a seta em 90 graus em relação ao eixo X da seta.</li>
+
+                    <li><b>roll(rolar) X</b>: rotaciona a seta em X graus em torno do eixo Y relativo a seta. A seta, inicialmente estará apontando para o norte do plano. <b>Exemplo</b>: roll 90, a instrução irá rotacionar a seta em 90 graus em relação ao eixo Y da seta.</li>
+
+                    <li><b>yaw(desviar) X</b>: rotaciona a seta em X graus em torno do eixo Z relativo a seta. A seta, inicialmente estará apontando para o norte do plano. <b>Exemplo</b>: yaw 90, a instrução irá rotacionar a seta em 90 graus em relação ao eixo Z da seta.</li>
                 </ul>
             </h3>
-            <div id="mup_blocks">
+            <div id="mup_blocks" margin-left="auto" margin-right="auto">
                 <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
                   <textarea name="src">-- instruções auxilio da movimentação--
-moveto 0 ,0 ,0   -- move a seta para o centro do plano -- 
+moveto 0,0,0     -- move a seta para o centro do plano -- 
+roll 90          -- gira a seta em 90 graus em torno do eixo Y --
 move 5           -- move a seta 5 unidades para a nova direção da seta --
-yaw 90           -- gira a seta 90 graus para a direita --
-move 3           -- move a seta 3 unidades para a nova direção --
-dowel</textarea>
+yaw 90           -- gira a seta 90 graus em torno do eixo Z --
+move 5           -- move a seta 5 unidades para a nova direção da seta --
+pitch 90         -- gira a seta 90 graus em torno do eixo X
+move 5           -- move a seta 5 unidades para a nova direção da seta --
+translate -5,0,-5-- translada o centro do plano cartesiano em -5 unidades no eixo X e Z
+moveto 0,0,0     -- move a seta para o centro do plano --
+dowel
+</textarea>
                   <input type="submit">
                 </form>
-                <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>
+                <iframe name="mup_frame_blocks" src="" width="1000" height="600" frameborder="1"></iframe>
                 <script>
                   var mupDiv = jQuery('#mup_blocks');
                   mupDiv.closest('pre').replaceWith(mupDiv);
@@ -49,6 +61,5 @@ dowel</textarea>
                 </script>
             </div>
         </div>
-        <!-- /whole -->
     </body>
 </html>
