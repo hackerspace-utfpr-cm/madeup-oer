@@ -1,0 +1,16 @@
+to stripe iStep
+  if (iStep / 20) % 2 == 0
+    .rgb = {1, 1, 0}
+  else
+    .rgb = {1, 0, 0.5}
+  end
+end
+yaw 90
+moveto 0, 0, 0
+for i through 180
+  stripe i
+  move 1
+  yaw 1
+end
+nsides = 100
+revolve 0, 1, 0, 360
