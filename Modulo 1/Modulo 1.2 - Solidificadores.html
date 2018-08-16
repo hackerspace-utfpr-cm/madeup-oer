@@ -8,7 +8,7 @@
         <link href="http://www.twodee.org/blog/wp-content/themes/midlife/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-        <link href="style.css" rel="stylesheet">
+        <link href="../RecursosComuns/style.css" rel="stylesheet">
         <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
         <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
@@ -17,48 +17,71 @@
     <body>
         <div id="whole">
             <h1>Solidificações</h1>
-            <h3>
+            <h3 align="justify">
                 <p>São as solidificações que vão determinar o preenchimento de nosso caminho, formando assim, nosso objeto. As instruções de solidificação são as seguintes:</p>
                 <ul>
-                    <li><b>dowel</b>: essa é a instrução mais simples das instruções de solidificação. Apesar de ser simples, é muito útil e pode resolver muito de nossos problemas. Essa instrução irá gerar uma solidificação em torno do nosso caminho, com um raio definido pela váriavel .radius e número de lados definido pela váriavel nsides. Por exemplo, se sua váriavel nsides estiver com o valor 4 e você utilizar o dowel, você irá solidificar o caminho com um obejto que tem 4 lados. Nota-se também que quanto maior o valor do nsides, mais redondo irá ficar sua solidificação.</li>
-                    <li><b>extrude X, Y, Z, R</b>: essa instrução irá solificar , se e somente se, o caminho estiver completamente fechado (não podendo ter nenhuma abertura no seu caminho. Ex: figuras geométricas) e não tiver cruzado com um outro caminho já feito. Com as duas condições sendo satisfeitas, ela irá verificar qual dos eixos você selecionou (X, Y ou Z; para selecionar basta colocar um valor maior que zero nos campos) e irá projetar seu caminho R unidades para esse eixo. Por exemplo, você fez um quadrado fechado com 5 unidades de lado que não colidiu com nenhum outro caminho e utiliza a instrução “extrude 0 , 0, 1, 5”, nota-se que a instrução projetou nosso caminho para o eixo Z, logo, ele irá projetar o caminho 5 unidades para esse eixo e irá solidificar, tornando assim o nosso objeto em um cubo (5 de altura, 5 de largura, 5 de profundidade definidio pelo extrude).</li>
+                    <li><b>boxes</b>: coloca caixas nos pontos onde a seta parou, porém mantém as linhas criadas vazias.</li>
+
+                    <li><b>spheres</b>: semelhante ao boxes, porém coloca esferas nos pontos onde a seta parou, mantendo as linhas criadas vazias.</li>
+
                     <li><b>revolve X, Y, Z, ANGULO</b>: essa instrução irá solidifcar fazendo uma rotação de seu caminho. Ela irá verificar qual o eixo e quantos graus irá rotacionar.</li>
+
+                    <li><b>dowel</b>: essa é a instrução mais simples das instruções de solidificação. Apesar de ser simples, é muito útil e pode resolver muitos de nossos problemas. Essa instrução irá gerar uma solidificação em torno do nosso caminho, com um raio definido pela váriavel .radius e número de lados definido pela váriavel nsides. Por exemplo, se sua váriavel nsides estiver com o valor 4 e você utilizar o dowel, você irá solidificar o caminho com um obejto que tem 4 lados. Nota-se também que quanto maior o valor do nsides, mais redondo irá ficar sua solidificação.</li>
+                    
                     <li><b>tube</b>: essa instrução irá solidificar seu caminho em forma de tubo. O raio externo desse tubo é definida pela váriavel .radius e o raio interno vai ser definido pela váriavel .innerRadius</li>
+
+                    <li><b>extrude X, Y, Z, R</b>: essa instrução irá solificar , se e somente se, o caminho estiver completamente fechado (não podendo ter nenhuma abertura no seu caminho. Ex: figuras geométricas) e não tiver cruzado com um outro caminho já feito. Com as duas condições sendo satisfeitas, ela irá verificar qual dos eixos você selecionou (X, Y ou Z; para selecionar basta colocar um valor maior que zero nos campos) e irá projetar seu caminho R unidades para esse eixo. Por exemplo, você fez um quadrado fechado com 5 unidades de lado que não colidiu com nenhum outro caminho e utiliza a instrução “extrude 0 , 0, 1, 5”, nota-se que a instrução projetou nosso caminho para o eixo Z, logo, ele irá projetar o caminho 5 unidades para esse eixo e irá solidificar, tornando assim o nosso objeto em um cubo (5 de altura, 5 de largura, 5 de profundidade definidio pelo extrude).</li>
                 </ul>
+                <p>No exemplo abaixo, mostramos exemplos de cada um dos solidificadores mais utilizados.</p>
             </h3>
-            <div id="mup_blocks">
+            <div id="mup_blocks" align="center">
                 <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
                   <textarea name="src">-- instruções de solidificação--
-moveto 0 ,0 ,0
-move 2.5
-dowel
-
-
-moveto 2.5,0,-0.5
-yaw 30
-repeat 3
-   move 3.5
-   yaw 120
-end
-yaw -30
-extrude 0,0,1,0.5
-
-
-moveto 0, 3.5,0
-move 2.5
+-- instruções de solidificação--
+moveto 0, 0, 0
 yaw 90
-move 0.5
+move 5
+boxes
+
+yaw -90
+
+moveto 0, -10, 0
 yaw 90
-move 2.5
+move 5
+spheres
+
+yaw 180
+
+moveto -2.5, -20, 0
 yaw 90
-move 0.5
+move 5
 revolve 0,1,0,360
 
+moveto 10, 0 , 0
+move 5
+yaw -90
+move 5
+dowel
 
-moveto 4,3.5, -0.25
 yaw 90
-move 2.5
-tube</textarea>
+
+moveto 10, -10, 0
+move 5
+yaw -90
+move 5
+tube
+
+yaw 90
+
+moveto 8, -17, 0
+roll 90
+move -3
+yaw -90
+move 4
+yaw 143
+move 5
+extrude 1, 0, 0, 3
+</textarea>
                   <input type="submit">
                 </form>
                 <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>

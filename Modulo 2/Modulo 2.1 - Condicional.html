@@ -8,7 +8,7 @@
         <link href="http://www.twodee.org/blog/wp-content/themes/midlife/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-        <link href="style.css" rel="stylesheet">
+        <link href="../RecursosComuns/style.css" rel="stylesheet">
         <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
         <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
@@ -17,28 +17,29 @@
     <body>
         <div id="whole">
             <h1>Condicional e váriaveis</h1>
-            <h3>
+            <h3 align="justify">
                 <p> Madeup também temos váriaveis. Váriaveis são objetos que são capazes de armazenar um valor ou uma expressão. Esse valor ou expressão fica armazenado na memória do computador. Para definir uma váriavel, basta escolhermos o nome dela e atribuir um valor. <b>Exemplo</b>: x = 10; nesse exemplo de código, criamos uma váriavel com nome de x que receberá o valor 10.</p>
                 <p>Além das instruções de movimento e direcionamento, temos outras instruções também. Essas instruções são um utilitário para o programador. Dentre elas, temos a instrução de condicional que é estrturada da seguinte forma:</p>
                 <ul>
                     <li><b>if(se) CONDIÇÃO else(senão) end(fim)</b>: o if é uma instrução de comparação. A instrução irá comparar se o parâmetro (CONDIÇÃO) é verdadeiro. Se for verdadeiro, ele irá executar todas as instruções desde a linha de baixo do if, até encontrar o else. Se caso o parâmetro (CONDIÇÃO) for falso, ele irá executar todas as instruções que estão na linha abaixo do else, até encontrar a palavra end, que finaliza a instrução if CONDIÇÃO end.</li>
                 </ul>
+                <p>No exemplo abaixo, temos a váriavel <b>fechado</b> que armazena um valor auxiliar, utilizado para ver se o objeto gerado (no caso uma caixa redonda) será fechado ou não. 
+                Para verificar isso, mude o valor da variável <b>fechado</b> para 1 e solidifique novamente o objeto.</p>
             </h3>
             <div id="mup_blocks">
                 <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
                   <textarea name="src">-- Variáveis, condicionais e laços --
-moveto 0 ,0 ,0 -- move a seta para o centro do plano -- 
-x = 11
-if x < 10
-   move 4
-   yaw 90
-   move 4
-else
-  move 4
-  yaw -90
-  move 4
+fechado = 0
+moveto 0, 0, 0
+moveto 0, -5
+yaw 90
+move 5
+if fechado == 1
+    yaw -90
+    move 5
 end
-dowel</textarea>
+nsides = 100
+revolve 1, 0, 0, 360</textarea>
                   <input type="submit">
                 </form>
                 <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>
@@ -48,9 +49,6 @@ dowel</textarea>
                   document.getElementById('mup_form_blocks').submit();
                 </script>
               </div>
-            <h3>
-                <p>Nota-se que o valor de x é inicialmente maior que 10, por isso, o programa executurá as instruções do else até o end, se mudarmos o valor de x para 9, por exemplo, ele passará a executar as instruçẽos do if até encontrar o else.</p>
-            </h3>
         </div>
         <!-- /whole -->
     </body>
