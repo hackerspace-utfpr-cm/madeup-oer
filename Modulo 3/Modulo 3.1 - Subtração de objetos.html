@@ -1,0 +1,62 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE = edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <title>Subtração de imagens</title>
+        <link href="http://www.twodee.org/blog/wp-content/themes/midlife/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+        <link href="../RecursosComuns/style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
+        <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
+        <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
+    </head>
+    <body>
+        <div id="whole">
+            <h1>Subtração de imagens</h1>
+            <h3 align="justify">
+                <p> No Madeup, temos a opção de realizar subtrações de objetos para fazermos objetos mais complexos.
+                Para se fazer isso basta criar uma variável para cada objeto e depois fazer uma subtração com ambos.
+                No exemplo abaixo, é feito um arco, usando uma parede e subtraindo o arco desejado da mesma.</p>
+
+            </h3>
+            <div id="mup_blocks">
+                <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://embed.madeup.xyz" method="post">
+                  <textarea name="src">-- Subtracao de imagens --
+moveto -8,0,1
+move 7
+yaw 90
+move 16
+yaw 90
+move 7
+yaw 90
+move 16
+parede = extrude 0,0,1,1
+
+yaw 90
+
+for angle through 180 by 10
+  polarto 5, angle
+end
+yaw 90
+move 10
+arco = extrude 0, 0, 1, 3
+
+parede - arco
+</textarea>
+                  <input type="submit">
+                </form>
+                <iframe name="mup_frame_blocks" src="" width="640" height="500" frameborder="1"></iframe>
+                <script>
+                  var mupDiv = jQuery('#mup_blocks');
+                  mupDiv.closest('pre').replaceWith(mupDiv);
+                  document.getElementById('mup_form_blocks').submit();
+                </script>
+              </div>
+        </div>
+        <!-- /whole -->
+    </body>
+</html>
