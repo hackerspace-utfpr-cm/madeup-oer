@@ -11,8 +11,8 @@ roll 90
 yaw 45
 
 for i to 5
-  moveto  -1.5+i, 0, 2.5-i
-  move 1
+  moveto  -1.25+i, 0, 2.75-i
+  move 2
   p = dowel
   caixa = caixa - p
 end
