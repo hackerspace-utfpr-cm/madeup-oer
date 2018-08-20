@@ -1,0 +1,20 @@
+moveto 0, 0, 0
+yaw 90
+move 5
+yaw 90
+move 2
+yaw 90
+move 5
+caixa = revolve 0, 1, 0, 360
+
+roll 90
+yaw 45
+
+for i to 5
+  moveto  -1.5+i, 0, 2.5-i
+  move 1
+  p = dowel
+  caixa = caixa - p
+end
+  
+caixa
