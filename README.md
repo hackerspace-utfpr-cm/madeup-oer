@@ -1,3 +1,4 @@
+# Sobre #
 Na wiki deste projeto, temos um resumo dos principais comandos do MadeUp.
 Utilize-a como referência rápida durante a utilização do objeto de
 aprendizagem:
@@ -8,15 +9,17 @@ a ferramenta Madeup, criado por Chris Johnson [1, 2, 3, 4, 5]. Ela
 permite a criação de modelos 3D de forma programática, similar à
 ideia do Logo (porém agora no âmbito 3D e com solidificação).
 
+# Licença #
+
 O conteúdo deste projeto está disponível sob a licença CC BY-SA 4.0. Muito
 resumidamente, você tem o direito de compartilhar e adaptar os conteúdos,
 dsde que seja dado crédito ao projeto original e que o conteúdo seja
 compartilhado sob a mesma licença. Consulte mais detalhes em no arquivo
 LICENSE.
 
-Referências:
-* [1] JOHNSON, Chris. Madeup . 2015. Programa de computador. Disponível em: <https://github.com/
-twodee/madeup/>.
+
+# Referências #
+* [1] JOHNSON, Chris. Madeup . 2015. Programa de computador. Disponível em https://github.com/twodee/madeup/.
 * [2] JOHNSON, Chris. Toward computational making with Madeup. In: ACM SIGCSE Technical
 Symposium on Computer Science Education . New York, NY, EUA: ACM, 2017. p. 297–302. ISBN
 978-1-4503-4698-6.
