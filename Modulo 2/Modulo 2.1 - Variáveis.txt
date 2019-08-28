@@ -1,0 +1,36 @@
+a = 360/5
+moveto 0,0,0
+
+yaw a
+move 2
+
+yaw a
+move 2
+
+yaw a
+move 2
+
+yaw a
+move 2
+
+yaw a
+move 2
+
+o = extrude 0,0,1,1
+o
+
+moveto 4,0,0
+a = 360/4
+yaw a
+move 2
+
+yaw a
+move 2
+
+yaw a
+move 2
+
+yaw a
+move 2
+o  = extrude 0,0,1,1
+o

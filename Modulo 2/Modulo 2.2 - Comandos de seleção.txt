@@ -1,0 +1,11 @@
+aberto = 0
+moveto 0, 0, 0
+moveto 0, -5
+yaw 90
+move 5
+if aberto == 1
+  yaw -90
+  move 5
+end
+nsides = 100
+revolve 1, 0, 0, 360
