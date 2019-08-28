@@ -1,0 +1,4 @@
+- Apresentação sobre o Madeup: Explicar a ferramenta brevemente e mostrar exemplo de objeto, ocultando o código
+- Capítulo 1: Falar sobre comandos de movimentação sempre usando exemplo no mundo real (tabuleiro/um papel demarcado no chão ou utilizar um participante para exemplo)
+- Capítulo 2: Descrever solidificadores, mostrando tanto no Madeup como eles operam sobre a linha 2D quanto os objetos impressos
+- Capítulo 3: Falar sobre as variáveis globais, com foco principalmente nas variáveis nsides, .innerRadius e .radius, que tem impacto direto nos objetos impressos. Apresentar brevemente o restante das varáveis.
