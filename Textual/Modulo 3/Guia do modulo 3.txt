@@ -1,0 +1,1 @@
+- Solidificação: Explicar o conceito de subtração de imagens e como ele auxilia na criação de objetos complexos, que sem ela seriam inviáveis

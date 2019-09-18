@@ -1,0 +1,57 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE = edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <title>Laços de repetição</title>
+        <link href="../RecursosComuns/jquery-css.css" rel="stylesheet">
+<link href="../RecursosComuns/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+        <link href="../RecursosComuns/style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
+        <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
+        <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
+    </head>
+    <body>
+        <div id="whole">
+            <h1>Laços de repetição</h1>
+            <h3 align="justify">
+                <p>Falando ainda de instruções que são utilitárias para o programador, temos também os laços de repetição, que são estruturados da seguinte forma:</p>
+                <ul>
+                    <li><b>repeat(repetir) X</b>: o repeat é um laço de repetição. Laços de repetição são trechos do código que repetem.Ele irá repetir X vezes as instruções que estão entre o repeat e o end. <b>Exemplo</b>: repeat 4, essa instrução repetirá quatro vezes tudo que estiver nas linhas abaixo do repeat até o end.</li> 
+                    <li><b>while(enquanto) CONDIÇÃO</b>: o while também é um laço de repetição, só que diferente do repeat. O repeat irá repetir independente do que aconteça no código antes, durante ou depois. No caso do while agora, ele irá verificar se a CONDIÇÃO é verdadeira, similar à instrução if, se a CONDIÇÃO for verdadeira, ele executará tudo que está entre o while e o end, se a CONDIÇÃO for falsa, ele não executará o que está entre o while e o end.</li> 
+                    <li><b>for(para) VAR in(em) A..B</b>: o for in também é um laço de repetição, ele recebe 3 parâmetros, VAR, A e B. O parâmetro VAR deverá ser uma váriavel previamente criada, já os parâmetros A e B serão dois números. O laço funcionará da seguinte forma: o parâmetro VAR vai receber na primeira execução o valor do parâmetro A, após isso, a cada execução, irá aumentar em 1 o valor da variável VAR seguirá aumentando em 1 até que o parâmetro VAR seja igual ao parâmetro B. Quando esse momento chegar, irá parar o laço de repetição.</li> 
+                </ul>
+                <p>No exemplo abaixo, usamos um laço para fazer uma esfera, utilizando o solidificador revolve.</p>
+            </h3>
+            <div id="mup_blocks">
+                <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://hackerspace.net.br/iot/madeup/?editor=blocks" method="post">
+                  <textarea name="src">-- Laços de repetição --
+yaw 90
+moveto 0, 0, 0
+for angle through 180
+    move 1
+    yaw 1
+end
+nsides = 100
+revolve 0, 1, 0, 360</textarea>
+                  <input type="submit">
+                </form>
+                <iframe name="mup_frame_blocks" src="" width="100%" height="500" frameborder="1"></iframe>
+                <script>
+                  var mupDiv = jQuery('#mup_blocks');
+                  mupDiv.closest('pre').replaceWith(mupDiv);
+                  document.getElementById('mup_form_blocks').submit();
+                </script>
+              </div>
+            <h3>
+                <p>Percebe-se que fizemos 3 quadrados identicos usando laços de repetições diferentes e que recebem parâmetros diferentes. </p>
+                <p>Essas instruções supracitadas, são as mais utilizadas normalmente, além delas existem outras instruções que tem funções parecidas com essas, como a for VAR to A, for VAR through A, que também são laços de repetição, porém, com parâmetros diferentes.</p>
+            </h3>
+        </div>
+        <!-- /whole -->
+    </body>
+</html>

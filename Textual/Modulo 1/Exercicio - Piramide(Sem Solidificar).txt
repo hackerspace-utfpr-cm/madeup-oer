@@ -1,0 +1,7 @@
+moveto 0,0,0
+move -2
+yaw 90
+move 2
+yaw -135
+move 2.8
+revolve 0,1,0,360

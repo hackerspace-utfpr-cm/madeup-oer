@@ -1,0 +1,4 @@
+- Capítulo 1: Descrever a utilização de variáveis. Mencionar a possibilidade de utilização de variáveis para salvar um solidificador como gancho para subtração de objetos posteriormente.
+- Capítulo 2: Explicar comandos de seleção e sua utilidade na área de programação
+- Capítulo 3: Explicar o funcionamento dos laços de repetição, mostrando como eles simplificam códigos que são repetitivos
+- Capítulo 4: Mostrar o conceito de funções e como elas ajudam a organizar e melhorar códigos
