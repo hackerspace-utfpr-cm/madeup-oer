@@ -41,10 +41,19 @@ body {
   /* margin-right: 20px; */
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  width: 1200px;
 
   /* I can't have this here if I want floats to wrap? */
   /* width: 960px; */
+}
+
+#mup_blocks {
+  width: 1100px;
+  align-self: "center";
+}
+
+#mup_form_blocks{
+  width: "100%";
 }
 
 h1 {
