@@ -1,34 +1,87 @@
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE = edge">
-        <meta name = "viewport" content="width = device-width, initial-scale = 1">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-        <title>Comandos de seleção</title>
-        <link href="../RecursosComuns/jquery-css.css" rel="stylesheet">
-<link href="../RecursosComuns/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle" rel="stylesheet">
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-        <link href="../RecursosComuns/style.css" rel="stylesheet">
-        <script type="text/javascript" src="http://www.twodee.org/scripts/toggle.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> 
-        <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
-        <script src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7" type="text/javascript" defer=""></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://s.gravatar.com/css/services.css?ver=2017Novaa">
-    </head>
-    <body>
-        <div id="whole">
-            <h1>Comandos de seleção</h1>
-            <h3 align="justify">
-                <p>Além das instruções de movimento e direcionamento, temos outras instruções. Essas instruções são utilitários para o programador. Dentre elas, temos a instrução de comando de seleção que é estrturada da seguinte forma:</p>
-                <ul>
-                    <li><b>if(se) CONDIÇÃO else(senão) end(fim)</b>: o if é uma instrução de comparação. A instrução irá comparar se o parâmetro (CONDIÇÃO) é verdadeiro. Se for verdadeiro, ele irá executar todas as instruções desde a linha de baixo do if, até encontrar o else. Se caso o parâmetro (CONDIÇÃO) for falso, ele irá executar todas as instruções que estão na linha abaixo do else, até encontrar a palavra end, que finaliza a instrução if CONDIÇÃO end.</li>
-                </ul>
-                <p>No exemplo abaixo, temos a váriavel <b>fechado</b> que armazena um valor auxiliar, utilizado para ver se o objeto gerado (no caso uma caixa redonda) será fechado ou não. 
-                Para verificar isso, mude o valor da variável <b>fechado</b> para 1 e solidifique novamente o objeto.</p>
-            </h3>
-            <div id="mup_blocks">
-                <form style="display: none" id="mup_form_blocks" target="mup_frame_blocks" action="http://hackerspace.net.br/iot/madeup/?editor=blocks" method="post">
-                  <textarea name="src">-- Variáveis, condicionais e laços --
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Comandos de seleção</title>
+    <link href="../RecursosComuns/jquery-css.css" rel="stylesheet" />
+    <link href="../RecursosComuns/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Merriweather+Sans|Open+Sans|Source+Sans+Pro:300|Oswald:300|Contrail+One|News+Cycle"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"
+    />
+    <link href="../RecursosComuns/style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="http://www.twodee.org/scripts/toggle.js"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="http://www.twodee.org/blog/wp-content/themes/midlife/utilities.js"></script>
+    <script
+      src="http://www.twodee.org/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.7.7"
+      type="text/javascript"
+      defer=""
+    ></script>
+    <style type="text/css"></style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      id="gravatar-card-css"
+      href="http://s.gravatar.com/css/hovercard.css?ver=2017Novaa"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      id="gravatar-card-services-css"
+      href="http://s.gravatar.com/css/services.css?ver=2017Novaa"
+    />
+  </head>
+  <body>
+    <div id="whole">
+      <h1>Comandos de seleção</h1>
+      <h3 align="justify">
+        <p>
+          Além das instruções de movimento e direcionamento, temos outras
+          instruções. Essas instruções são utilitários para o programador.
+          Dentre elas, temos a instrução de comando de seleção que é estrturada
+          da seguinte forma:
+        </p>
+        <ul>
+          <li>
+            <b>if(se) CONDIÇÃO else(senão) end(fim)</b>: o if é uma instrução de
+            comparação. A instrução irá comparar se o parâmetro (CONDIÇÃO) é
+            verdadeiro. Se for verdadeiro, ele irá executar todas as instruções
+            desde a linha de baixo do if, até encontrar o else. Se caso o
+            parâmetro (CONDIÇÃO) for falso, ele irá executar todas as instruções
+            que estão na linha abaixo do else, até encontrar a palavra end, que
+            finaliza a instrução if CONDIÇÃO end.
+          </li>
+          <img src="condicao.png" alt="Bloco move" />
+        </ul>
+        <p>
+          No exemplo abaixo, temos a váriavel <b>fechado</b> que armazena um
+          valor auxiliar, utilizado para ver se o objeto gerado (no caso uma
+          caixa redonda) será fechado ou não. Para verificar isso, mude o valor
+          da variável <b>fechado</b> para 1 e solidifique novamente o objeto.
+        </p>
+      </h3>
+      <div id="mup_blocks">
+        <form
+          style="display: none"
+          id="mup_form_blocks"
+          target="mup_frame_blocks"
+          action="http://hackerspace.net.br/iot/madeup/?editor=blocks"
+          method="post"
+        >
+          <textarea name="src">
 fechado = 0
 moveto 0, 0, 0
 moveto 0, -5
@@ -39,17 +92,24 @@ if fechado == 1
     move 5
 end
 nsides = 100
-revolve 1, 0, 0, 360</textarea>
-                  <input type="submit">
-                </form>
-                <iframe name="mup_frame_blocks" src="" width="100%" height="500" frameborder="1"></iframe>
-                <script>
-                  var mupDiv = jQuery('#mup_blocks');
-                  mupDiv.closest('pre').replaceWith(mupDiv);
-                  document.getElementById('mup_form_blocks').submit();
-                </script>
-              </div>
-        </div>
-        <!-- /whole -->
-    </body>
+revolve 1, 0, 0, 360</textarea
+          >
+          <input type="submit" />
+        </form>
+        <iframe
+          name="mup_frame_blocks"
+          src=""
+          width="100%"
+          height="500"
+          frameborder="1"
+        ></iframe>
+        <script>
+          var mupDiv = jQuery("#mup_blocks");
+          mupDiv.closest("pre").replaceWith(mupDiv);
+          document.getElementById("mup_form_blocks").submit();
+        </script>
+      </div>
+    </div>
+    <!-- /whole -->
+  </body>
 </html>
